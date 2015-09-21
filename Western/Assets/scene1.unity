@@ -228,6 +228,7 @@ GameObject:
   - 212: {fileID: 1127103112}
   - 61: {fileID: 1127103111}
   - 50: {fileID: 1127103110}
+  - 114: {fileID: 1127103114}
   m_Layer: 0
   m_Name: Testplayer
   m_TagString: Untagged
@@ -301,3 +302,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!114 &1127103114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1127103109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 686eca90d47a48e4198b3050d8b892c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpHeight: 40
+  moveSpeed: 20
+  gravity: 1.5
