@@ -6,8 +6,8 @@ using System.Collections;
 /// </summary>
 public class MoveScript : MonoBehaviour {
 
-    public float jumpHeight = 10;
-    public float moveSpeed = 10;
+    public float jumpHeight = 50f;
+    public float moveSpeed = 50f;
     public float gravity = 1.5f;
     private Vector2 movement;
     private bool isGrounded = false;
@@ -33,14 +33,14 @@ public class MoveScript : MonoBehaviour {
         }
         
         
-        movement.y -= gravity;
+       // movement.y -= gravity;
         movement.x = Input.GetAxis("Horizontal") * moveSpeed;
 
         Ray ray = new Ray(transform.position, Vector3.down);
         float dist = movement.y;
         RaycastHit hit;
 
-        bool ground = Physics.Raycast(ray, out hit, 1);
+        bool ground = Physics.Raycast(ray, out hit, dist);
 
         if (ground)
         {
@@ -53,17 +53,17 @@ public class MoveScript : MonoBehaviour {
     {
         GetComponent<Rigidbody2D>().velocity = movement;
     }
-
+    /*
     void OnCollisionEnter2D(Collision2D collision)
     {
         isGrounded = true;
        
     }
-
-    void OnCollisionExit2D(Collision2D collision)
+    */
+    /*void OnCollisionExit2D(Collision2D collision)
     {
         movement.y -= gravity;
         isGrounded = false;
 
-    }
+    }*/
 }
